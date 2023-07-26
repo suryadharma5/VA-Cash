@@ -7,8 +7,7 @@
         android:icon="@drawable/vector_home"
         tools:ignore="MenuTitle" />
     <item
-        android:title="tes"
-
+        android:icon="@drawable/vector_search"
         tools:ignore="MenuTitle"/>
     <item
         android:icon="@drawable/vector_burger"
