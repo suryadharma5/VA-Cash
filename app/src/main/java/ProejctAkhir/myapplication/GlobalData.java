@@ -7,7 +7,8 @@ public class GlobalData {
     public  static String topUp_value = "0";
     public static String cash = "Rp. 10000";
 
-     public static ArrayList<Game> games = new ArrayList<Game>();
+    //  Game
+    public static ArrayList<Game> games = new ArrayList<Game>();
 
     public void createGame () {
         //Mobile Game

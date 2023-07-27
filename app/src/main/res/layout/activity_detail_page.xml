@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#040120"
+    tools:context=".DetailPage">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#040120"
+            android:orientation="vertical"
+            android:paddingTop="8dp">
+
+            <!-- Header -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/container_dua"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="20dp"
+                    android:paddingTop="20dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="20dp"
+                        android:src="@drawable/group_2" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:fontFamily="@font/font_bruno"
+                        android:text="Detail"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="158dp"
+                    android:layout_height="65dp"
+                    android:layout_gravity="bottom"
+                    android:layout_marginStart="90dp"
+                    android:background="@drawable/template_profile"
+                    android:paddingHorizontal="28dp"
+                    android:paddingTop="25dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/font_bruno"
+                        android:shadowColor="@color/white"
+                        android:shadowDx="5"
+                        android:shadowDy="5"
+                        android:shadowRadius="20"
+                        android:text="Juligan21"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="12dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <!-- Description -->
+            <LinearLayout
+                android:layout_width="294dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="36dp"
+                android:background="@drawable/bg_item"
+                android:orientation="horizontal"
+                android:paddingStart="20dp"
+                android:paddingTop="20dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="105dp"
+                        android:layout_height="117dp"
+                        android:src="@drawable/item" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="-10dp"
+                        android:fontFamily="@font/font_bruno"
+                        android:shadowColor="@color/white"
+                        android:shadowDx="5"
+                        android:shadowDy="5"
+                        android:shadowRadius="20"
+                        android:text="50 UC"
+                        android:textColor="@color/white"
+                        android:textSize="18dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="140dp"
+                    android:layout_height="165dp"
+                    android:layout_marginStart="18dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="117dp"
+                        android:layout_height="115dp"
+                        android:layout_marginStart="5dp"
+                        android:ellipsize="end"
+                        android:text="PUBG Mobile UC, which stands for unknown currency is PUBG Mobile’s version of premium currency. "
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/harga_item"
+                        android:fontFamily="@font/font_bruno"
+                        android:gravity="center"
+                        android:shadowColor="@color/yellow"
+                        android:shadowDx="5"
+                        android:shadowDy="5"
+                        android:shadowRadius="20"
+                        android:text="Rp. 10.000.00"
+                        android:textAlignment="center"
+                        android:textColor="@color/yellow"
+                        android:textSize="12dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="280dp"
+                android:layout_height="275dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/border_purchaseform"
+                android:orientation="vertical"
+                android:paddingStart="15dp"
+                android:paddingTop="13dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:fontFamily="@font/font_bruno"
+                    android:shadowColor="@color/yellow"
+                    android:shadowDx="5"
+                    android:shadowDy="5"
+                    android:shadowRadius="20"
+                    android:text="Purchase Form"
+                    android:textColor="@color/yellow"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/font_bruno"
+                    android:shadowColor="@color/white"
+                    android:shadowDx="5"
+                    android:shadowDy="5"
+                    android:shadowRadius="20"
+                    android:text="Email"
+                    android:textColor="@color/white"
+                    android:textSize="13dp" />
+
+                <EditText
+                    android:layout_width="248dp"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="17dp"
+                    android:background="@drawable/input_topup"
+                    android:focusable="auto"
+                    android:fontFamily="@font/font_bruno"
+                    android:hint="Input email"
+                    android:inputType="text"
+                    android:paddingStart="15dp"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/abu"
+                    android:textSize="13dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/font_bruno"
+                    android:shadowColor="@color/white"
+                    android:shadowDx="5"
+                    android:shadowDy="5"
+                    android:shadowRadius="20"
+                    android:text="Email"
+                    android:textColor="@color/white"
+                    android:textSize="13dp" />
+
+                <EditText
+                    android:layout_width="248dp"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/input_topup"
+                    android:focusable="auto"
+                    android:fontFamily="@font/font_bruno"
+                    android:hint="Input username"
+                    android:inputType="text"
+                    android:paddingStart="15dp"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/abu"
+                    android:textSize="13dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="35dp"
+                        android:fontFamily="@font/font_bruno"
+                        android:shadowColor="@color/white"
+                        android:shadowDx="5"
+                        android:shadowDy="5"
+                        android:shadowRadius="20"
+                        android:text="Quantity"
+                        android:textColor="@color/white"
+                        android:textSize="12dp" />
+
+                    <LinearLayout
+                        android:layout_width="47dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/stepper_min">
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            android:fontFamily="@font/font_bruno"
+                            android:gravity="center_horizontal"
+                            android:paddingTop="-10dp"
+                            android:text="-"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="57dp"
+                        android:layout_height="21dp"
+                        android:layout_marginLeft="-5dp"
+                        android:layout_marginTop="4.5dp"
+                        android:background="@drawable/stepper_number"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/font_bruno"
+                            android:text="1"
+                            android:textColor="@color/abu"
+                            android:textSize="13dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="47dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="-4.7dp"
+                        android:background="@drawable/stepper_plus">
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            android:fontFamily="@font/font_bruno"
+                            android:gravity="center_horizontal"
+                            android:paddingTop="-10dp"
+                            android:text="+"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="280dp"
+                android:layout_height="135dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/border_purchaseform"
+                android:orientation="vertical"
+                android:paddingStart="15dp"
+                android:paddingTop="13dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:fontFamily="@font/font_bruno"
+                    android:shadowColor="@color/yellow"
+                    android:shadowDx="5"
+                    android:shadowDy="5"
+                    android:shadowRadius="20"
+                    android:text="Purchase Detaill"
+                    android:textColor="@color/yellow"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PUBG Mobile"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/font_bruno"
+                    android:textSize="13dp"/>
+                
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/item"/>
+
+                    <TextView
+                        android:layout_marginStart="21dp"
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="50UC"
+                        android:textSize="12dp"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/font_bruno"/>
+
+                    <TextView
+                        android:layout_marginStart="100dp"
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1"
+                        android:textSize="12dp"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/font_bruno"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="280dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/pay_border"
+                android:orientation="horizontal"
+                android:paddingStart="15dp"
+                android:layout_marginBottom="60dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/font_bruno"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="13dp"
+                    android:shadowColor="@color/ungu_terang"
+                    android:shadowDx="5"
+                    android:shadowDy="5"
+                    android:shadowRadius="20"
+                    android:text="Rp 10.000.00"
+                    android:textColor="@color/ungu_terang"
+                    android:textSize="16dp" />
+                
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/pay_button"
+                    android:gravity="center">
+
+                    <Button
+                        android:text="Pay"
+                        android:fontFamily="@font/font_bruno"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:shadowColor="@color/black"
+                        android:shadowDx="5"
+                        android:shadowDy="5"
+                        android:shadowRadius="20"/>
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</LinearLayout>
