@@ -203,7 +203,7 @@
                     android:shadowDx="5"
                     android:shadowDy="5"
                     android:shadowRadius="20"
-                    android:text="Email"
+                    android:text="Username"
                     android:textColor="@color/white"
                     android:textSize="13dp" />
 
