@@ -9,8 +9,10 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import java.text.NumberFormat;
+import java.util.ArrayList;
 
 public class DetailPage extends AppCompatActivity {
+    public ArrayList<Transaction> transactions = new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         final int[] num = {0};
@@ -62,6 +64,8 @@ public class DetailPage extends AppCompatActivity {
                 if (num[0] == 0){
                     error.setVisibility(View.VISIBLE);
                 }else {
+                    Transaction transaction = new Transaction("Valorant", "Newbie Pack", String.valueOf(num[0]), String.valueOf(num[0] * price[0]));
+                    transactions.add(transaction);
                     error.setVisibility(View.GONE);
                 }
             }
