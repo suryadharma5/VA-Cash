@@ -31,7 +31,6 @@ public class DetailPage extends AppCompatActivity {
         Button button_plus = findViewById(R.id.plus_btn);
         Button button_min = findViewById(R.id.minus);
         Button paybutton = findViewById(R.id.paybutton);
-
         //OnClick Handler
         button_plus.setOnClickListener(new View.OnClickListener() {
             @Override

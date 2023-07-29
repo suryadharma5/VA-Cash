@@ -1,9 +1,464 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".Profile">
+    tools:context=".ProfilePage"
+    android:orientation="vertical"
+    android:background="#040120">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ScrollView
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:background="#040120"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <!-- Untuk Background gambar  -->
+            <RelativeLayout
+                android:id="@+id/container_pertama"
+                android:layout_width="wrap_content"
+                android:layout_height="198dp"
+                android:paddingHorizontal="20dp"
+                android:paddingTop="20dp"
+                android:background="@drawable/bg_profile_image">
+
+
+                <LinearLayout
+                    android:id="@+id/container_dua"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/group_2"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="20dp"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Profile"
+                        android:fontFamily="@font/font_bruno"
+                        android:textSize="20sp"
+                        android:layout_marginTop="4dp"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <!--Untuk Detail Profile-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-80dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:src="@drawable/profile_picture"
+
+                    android:maxHeight="50dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Vincensia Charitas"
+                    android:fontFamily="@font/font_bruno"
+                    android:textColor="@color/white"
+                    android:textAlignment="center"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="juligan12"
+                    android:fontFamily="@font/font_bruno"
+                    android:textColor="@color/ungu_gelap"
+                    android:textAlignment="center"
+                    android:shadowColor="@color/ungu_gelap"
+                    android:shadowDx="5"
+                    android:shadowDy="5"
+                    android:shadowRadius="20"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="4dp">
+
+                    <ImageView
+                        android:layout_width="16dp"
+                        android:layout_height="14dp"
+                        android:src="@drawable/vector_mail"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Vincensiacaribuah@dinas.ac.id"
+                        android:textColor="@color/abu"
+                        android:layout_marginLeft="5dp"
+                        android:fontFamily="@font/font_styrene"/>
+                </LinearLayout>
+
+                <!--Wallet-->
+                <LinearLayout
+                    android:id="@+id/wallet"
+                    android:layout_width="280dp"
+                    android:layout_height="56dp"
+                    android:background="@drawable/bg_wallet"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="30dp"
+                    android:paddingTop="12dp"
+                    >
+
+                    <ImageView
+                        android:layout_marginLeft="30dp"
+                        android:layout_width="27dp"
+                        android:layout_height="23dp"
+                        android:src="@drawable/vector_wallet" />
+
+                    <TextView
+                        android:id="@+id/balance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rp. 0"
+                        android:textSize="15dp"
+                        android:textColor="@color/white"
+                        android:textAlignment="center"
+                        android:fontFamily="@font/font_bruno"
+                        android:layout_marginLeft="11dp"
+                        android:layout_marginTop="3dp"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+            <!--Input Section Start-->
+            <LinearLayout
+                android:id="@+id/topup_input_section"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingHorizontal="15dp"
+                android:layout_marginTop="20dp">
+
+                <LinearLayout
+                    android:layout_width="350dp"
+                    android:layout_height="250dp"
+                    android:background="@drawable/border_topup"
+                    android:paddingVertical="30dp"
+                    android:paddingHorizontal="22dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Top Up"
+                        android:fontFamily="@font/font_bruno"
+                        android:textColor="@color/yellow"
+                        android:textAlignment="center"
+                        android:shadowColor="@color/yellow"
+                        android:shadowDx="5"
+                        android:shadowDy="5"
+                        android:shadowRadius="20"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="51dp"
+                        android:background="@drawable/input_topup"
+                        android:paddingHorizontal="20dp"
+                        android:layout_marginTop="20dp"
+                        android:paddingTop="5dp">
+                        <EditText
+                            android:id="@+id/topup_field"
+                            android:layout_width="wrap_content"
+                            android:fontFamily="@font/font_bruno"
+                            android:layout_height="wrap_content"
+                            android:inputType="text"
+                            android:hint="Top Up Amount"
+                            android:textColorHint="@color/abu"
+                            android:textSize="13dp"
+                            android:focusable="auto"
+                            android:textColor="@color/white"
+                            />
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/error"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12dp"
+                        android:text="muka saya ganteng kaya sultan"
+                        android:fontFamily="@font/font_bruno"
+                        android:textColor="@color/merah"
+                        android:layout_gravity="end"
+                        android:layout_marginRight="10dp"
+                        android:textAlignment="textEnd"/>
+
+                    <LinearLayout
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/submit_topup_btn"
+                        android:gravity="center"
+                        android:layout_marginTop="20dp"
+                        android:layout_gravity="center">
+
+                        <Button
+                            android:id="@+id/topup_button"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Confirm"
+                            android:background="@android:color/transparent"
+                            android:fontFamily="@font/font_bruno"
+                            android:textColor="@color/white"/>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!-- Input Section End  -->
+
+            <!-- History Section Start  -->
+            <LinearLayout
+                android:id="@+id/history_section"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="0dp"
+                android:paddingHorizontal="55dp"
+                android:layout_marginTop="38dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="History"
+                    android:fontFamily="@font/font_bruno"
+                    android:textColor="@color/yellow"
+                    android:textAlignment="center"
+                    android:shadowColor="@color/yellow"
+                    android:shadowDx="5"
+                    android:shadowDy="5"
+                    android:shadowRadius="20"/>
+
+                <!-- Repeater Start -->
+                <LinearLayout
+                    android:layout_width="320dp"
+                    android:layout_height="125dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/repeater_history"
+                    android:layout_marginLeft="-10dp"
+                    android:paddingHorizontal="25dp"
+                    android:paddingTop="9dp"
+                    android:paddingBottom="10dp"
+                    android:orientation="horizontal"
+                    android:gravity="start|center_vertical"
+                    android:layout_gravity="start">
+
+                    <ImageView
+                        android:id="@+id/game_picture"
+                        android:layout_width="63dp"
+                        android:layout_height="67dp"
+                        android:src="@drawable/game_image"
+                        android:layout_marginBottom="11dp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:paddingTop="27dp"
+                        android:layout_marginLeft="10dp">
+                        <TextView
+                            android:id="@+id/game_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Valorant"
+                            android:textColor="@color/white"
+                            android:fontFamily="@font/font_bruno"/>
+
+                        <TextView
+                            android:id="@+id/game_items"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Newbie Pack - 2 pcs"
+                            android:textColor="@color/white"
+                            android:fontFamily="@font/font_bruno"
+                            android:textSize="8dp"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="25dp"
+                        android:text="Rp. 120.000"
+                        android:textSize="12dp"
+                        android:textColor="@color/yellow"
+                        android:fontFamily="@font/font_bruno"
+                        android:shadowColor="@color/yellow"
+                        android:shadowDx="5"
+                        android:shadowDy="5"
+                        android:shadowRadius="20"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="320dp"
+                    android:layout_height="125dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/repeater_history"
+                    android:layout_marginLeft="-10dp"
+                    android:paddingHorizontal="25dp"
+                    android:paddingTop="9dp"
+                    android:paddingBottom="10dp"
+                    android:orientation="horizontal"
+                    android:gravity="start|center_vertical"
+                    android:layout_gravity="start">
+
+                    <ImageView
+                        android:id="@+id/game_picture2"
+                        android:layout_width="63dp"
+                        android:layout_height="67dp"
+                        android:src="@drawable/game_image"
+                        android:layout_marginBottom="11dp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:paddingTop="27dp"
+                        android:layout_marginLeft="10dp">
+                        <TextView
+                            android:id="@+id/game_name2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Valorant"
+                            android:textColor="@color/white"
+                            android:fontFamily="@font/font_bruno"/>
+
+                        <TextView
+                            android:id="@+id/game_items2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Newbie Pack - 2 pcs"
+                            android:textColor="@color/white"
+                            android:fontFamily="@font/font_bruno"
+                            android:textSize="8dp"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="25dp"
+                        android:text="Rp. 120.000"
+                        android:textSize="12dp"
+                        android:textColor="@color/yellow"
+                        android:fontFamily="@font/font_bruno"
+                        android:shadowColor="@color/yellow"
+                        android:shadowDx="5"
+                        android:shadowDy="5"
+                        android:shadowRadius="20"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="320dp"
+                    android:layout_height="125dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/repeater_history"
+                    android:layout_marginLeft="-10dp"
+                    android:paddingHorizontal="25dp"
+                    android:paddingTop="9dp"
+                    android:paddingBottom="10dp"
+                    android:orientation="horizontal"
+                    android:gravity="start|center_vertical"
+                    android:layout_gravity="start">
+
+                    <ImageView
+                        android:id="@+id/game_picture3"
+                        android:layout_width="63dp"
+                        android:layout_height="67dp"
+                        android:src="@drawable/game_image"
+                        android:layout_marginBottom="11dp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:paddingTop="27dp"
+                        android:layout_marginLeft="10dp">
+                        <TextView
+                            android:id="@+id/game_name3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Valorant"
+                            android:textColor="@color/white"
+                            android:fontFamily="@font/font_bruno"/>
+
+                        <TextView
+                            android:id="@+id/game_items3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Newbie Pack - 2 pcs"
+                            android:textColor="@color/white"
+                            android:fontFamily="@font/font_bruno"
+                            android:textSize="8dp"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="25dp"
+                        android:text="Rp. 120.000"
+                        android:textSize="12dp"
+                        android:textColor="@color/yellow"
+                        android:fontFamily="@font/font_bruno"
+                        android:shadowColor="@color/yellow"
+                        android:shadowDx="5"
+                        android:shadowDy="5"
+                        android:shadowRadius="20"/>
+
+                </LinearLayout>
+                <!-- Repeater End -->
+
+            </LinearLayout>
+
+
+
+
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above= "@+id/bottom_navbar">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navbar"
+            android:paddingTop="20dp"
+            android:background="@drawable/navbar_bg"
+            android:layout_width="match_parent"
+            android:layout_height="82dp"
+            android:layout_alignParentBottom="true"
+            app:menu="@menu/navbar"
+            app:labelVisibilityMode="labeled"/>
+    </FrameLayout>
+
+
+</LinearLayout>
+
+
