@@ -1,0 +1,16 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Image -->
+    <item android:drawable="@drawable/pubg_img" />
+
+    <!-- Shadow -->
+    <item
+        android:top="300dp"> <!-- Sesuaikan tinggi bayangan (shadow_height) sesuai kebutuhan -->
+        <shape android:shape="rectangle">
+            <gradient
+                android:angle="90"
+                android:startColor="#70DCFC17"
+                android:centerColor="#20DCFC17"
+                android:endColor="#00DCFC17" />
+        </shape>
+    </item>
+</layer-list>

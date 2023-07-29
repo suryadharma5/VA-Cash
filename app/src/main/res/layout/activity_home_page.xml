@@ -73,6 +73,7 @@
                     android:paddingTop="25dp">
 
                     <TextView
+                        android:id="@+id/username"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/font_bruno"
@@ -92,8 +93,79 @@
                 android:layout_marginTop="40dp"
                 android:id="@+id/slider"
                 android:layout_width="300dp"
-                android:layout_height="150dp"
+                android:layout_height="200dp"
                 android:layout_gravity="center" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingRight="26dp"
+                android:paddingLeft="26dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="37dp">
+
+                <LinearLayout
+                    android:layout_width="122dp"
+                    android:layout_height="49dp"
+                    android:orientation="horizontal"
+                    android:background="@drawable/bg_wallet"
+                    android:gravity="center"
+                    android:paddingBottom="7dp">
+                    <ImageView
+                        android:layout_width="14dp"
+                        android:layout_height="18dp"
+                        android:src="@drawable/mobile_vector"
+                        android:layout_marginRight="10dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Mobile"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/font_bruno"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="122dp"
+                    android:layout_height="49dp"
+                    android:orientation="horizontal"
+                    android:background="@drawable/bg_wallet"
+                    android:gravity="center"
+                    android:paddingBottom="7dp">
+                    <ImageView
+                        android:layout_width="19dp"
+                        android:layout_height="23dp"
+                        android:src="@drawable/pc_vector"
+                        android:layout_marginRight="10dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="PC"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/font_bruno"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="122dp"
+                    android:layout_height="49dp"
+                    android:orientation="horizontal"
+                    android:background="@drawable/bg_wallet"
+                    android:gravity="center"
+                    android:paddingBottom="7dp">
+                    <ImageView
+                        android:layout_width="19dp"
+                        android:layout_height="23dp"
+                        android:src="@drawable/console_vector"
+                        android:layout_marginRight="10dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Console"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/font_bruno"/>
+                </LinearLayout>
+
+            </LinearLayout>
 
 
 

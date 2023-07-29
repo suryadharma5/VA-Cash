@@ -1,3 +1,20 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <!--Login Page-->
+    <string name="app_name">VA-Cash</string>
+    <string name="cash">CASH</string>
+    <string name="va">VA</string>
+    <string name="log_in">LOG IN</string>
+    <string name="email_label">Email</string>
+    <string name="input_email">Input your email</string>
+    <string name="pass_label">Password</string>
+    <string name="input_pass">Input your password</string>
+    <string name="continue_btn">Continue</string>
+    <string name="email_err"> </string>
+    <string name="pass_err"> </string>
+
+    <!--Item Page-->
+    <string name="items">Items</string>
+    <string name="username">Apollo</string>
+    <string name="mobile">Mobile</string>
+    <string name="pubg_mobile">PUBG Mobile</string>
 </resources>

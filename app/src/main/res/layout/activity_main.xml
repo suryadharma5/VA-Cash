@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:context=".MainActivity"
+    android:id="@+id/login"
+    android:background="@drawable/background"
+>
+
+    <RelativeLayout
+        android:id="@+id/group_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="62dp">
+
+        <TextView
+            android:id="@+id/va_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:fontFamily="@font/font_bruno"
+            android:text="@string/va"
+            android:textAppearance="@style/va_title"/>
+
+        <TextView
+            android:id="@+id/cash_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/va_title"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/font_bruno"
+            android:text="@string/cash"
+            android:textAppearance="@style/cash_title"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/login_title"
+        android:layout_width="wrap_content"
+        android:layout_height="22dp"
+        android:layout_below="@+id/group_title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="90dp"
+        android:fontFamily="@font/font_bruno"
+        android:text="@string/log_in"
+        android:textAppearance="@style/login_title"
+        android:gravity="top"
+        />
+
+    <RelativeLayout
+        android:id="@+id/email_container"
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/login_title"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="39dp">
+
+        <TextView
+            android:id="@+id/email_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="1dp"
+            android:fontFamily="@font/font_bruno"
+            android:text="@string/email_label"
+            android:textAppearance="@style/login_label" />
+
+        <RelativeLayout
+            android:id="@+id/email_field"
+            android:layout_width="350dp"
+            android:layout_height="45dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="35dp"
+            android:background="@drawable/login_field"
+            android:elevation="4dp">
+
+            <EditText
+                android:id="@+id/loginEmail"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:backgroundTint="#00FFFFFF"
+                android:ems="10"
+                android:fontFamily="@font/font_styrene"
+                android:hint="@string/input_email"
+                android:inputType="textEmailAddress"
+                android:paddingHorizontal="20dp"
+                android:singleLine="false"
+                android:textAppearance="@style/login_input"
+                android:textColor="@color/white"
+                android:textColorHint="@color/abu" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/emailErr"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/email_field"
+            android:fontFamily="@font/font_styrene"
+            android:text="@string/email_err"
+            android:textAlignment="textEnd"
+            android:textAppearance="@style/login_err"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/pass_container"
+        android:layout_below="@+id/email_container"
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp">
+
+        <TextView
+            android:id="@+id/pass_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="1dp"
+            android:fontFamily="@font/font_bruno"
+            android:text="@string/pass_label"
+            android:textAppearance="@style/login_label" />
+
+        <RelativeLayout
+            android:id="@+id/pass_field"
+            android:layout_width="350dp"
+            android:layout_height="45dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="35dp"
+            android:background="@drawable/login_field"
+            android:elevation="4dp">
+
+            <EditText
+                android:id="@+id/loginPass"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:backgroundTint="#00FFFFFF"
+                android:ems="10"
+                android:fontFamily="@font/font_styrene"
+                android:hint="@string/input_pass"
+                android:inputType="textPassword"
+                android:paddingHorizontal="20dp"
+                android:singleLine="false"
+                android:textAppearance="@style/login_input"
+                android:textColor="@color/white"
+                android:textColorHint="@color/abu" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/passErr"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pass_field"
+            android:fontFamily="@font/font_styrene"
+            android:text="@string/pass_err"
+            android:textAlignment="textEnd"
+            android:textAppearance="@style/login_err"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/login_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pass_container"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        >
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/loginBtn"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:background="@drawable/login_btn"
+            android:elevation="12dp"
+            android:fontFamily="@font/font_bruno"
+            android:text="@string/continue_btn"
+            android:textSize="12sp"
+            android:textAllCaps="false"
+            />
+
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

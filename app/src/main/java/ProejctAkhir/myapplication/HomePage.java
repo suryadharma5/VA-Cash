@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
 import android.os.Bundle;
+import android.widget.TextView;
 
 public class HomePage extends AppCompatActivity {
 
@@ -12,6 +13,10 @@ public class HomePage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page);
+
+        TextView username = findViewById(R.id.username);
+
+        username.setText(GlobalData.username);
 
         ViewPager imageSlider = findViewById(R.id.slider);
 

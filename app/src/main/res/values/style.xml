@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!--Login Page-->
+    <style name="va_title">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">#EA7AF4</item>
+        <item name="android:shadowColor">#EA7AF4</item>
+        <item name="android:shadowDx">0</item>
+        <item name="android:shadowDy">0</item>
+        <item name="android:shadowRadius">15</item>
+    </style>
+    <style name="cash_title">
+        <item name="android:textSize">36sp</item>
+        <item name="android:textColor">#DCFC17</item>
+        <item name="android:shadowColor">#DCFC17</item>
+        <item name="android:shadowDx">0</item>
+        <item name="android:shadowDy">0</item>
+        <item name="android:shadowRadius">15</item>
+    </style>
+    <style name="login_title">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">#E34BF0</item>
+        <item name="android:shadowColor">#E34BF0</item>
+        <item name="android:shadowDx">0</item>
+        <item name="android:shadowDy">0</item>
+        <item name="android:shadowRadius">10</item>
+    </style>
+    <style name="login_label">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#FFFFFFFF</item>
+        <item name="android:shadowColor">#FFFFFFFF</item>
+        <item name="android:shadowDx">0</item>
+        <item name="android:shadowDy">0</item>
+        <item name="android:shadowRadius">4</item>
+    </style>
+    <style name="login_input">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#80FFFFFF</item>
+    </style>
+    <style name="login_err">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#FF0000</item>
+        <item name="android:shadowColor">#FF0000</item>
+        <item name="android:shadowDx">0</item>
+        <item name="android:shadowDy">0</item>
+        <item name="android:shadowRadius">4</item>
+    </style>
+
+<!--Item Page-->
+    <style name="items">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:shadowColor">#FFFFFF</item>
+        <item name="android:shadowDx">0</item>
+        <item name="android:shadowDy">0</item>
+        <item name="android:shadowRadius">10</item>
+    </style>
+    <style name="usernameBar">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:shadowColor">#FFFFFF</item>
+        <item name="android:shadowDx">0</item>
+        <item name="android:shadowDy">0</item>
+        <item name="android:shadowRadius">4</item>
+    </style>
+    <style name="circleImg">
+        <item name="cornerSize">50%</item>
+        <item name="android:shadowColor">#FFFFFF</item>
+        <item name="android:shadowDx">0</item>
+        <item name="android:shadowDy">0</item>
+        <item name="android:shadowRadius">10</item>
+    </style>
+    <style name="mobileTitle">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#EA7AF4</item>
+        <item name="android:shadowColor">#EA7AF4</item>
+        <item name="android:shadowDx">0</item>
+        <item name="android:shadowDy">0</item>
+        <item name="android:shadowRadius">10</item>
+    </style>
+    <style name="gameTitle">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">#DCFC17</item>
+        <item name="android:shadowColor">#DCFC17</item>
+        <item name="android:shadowDx">0</item>
+        <item name="android:shadowDy">0</item>
+        <item name="android:shadowRadius">10</item>
+    </style>
+    <style name="gameCoverImg">
+        <item name="cornerSize">10%</item>
+        <item name="android:shadowColor">#DCFC17</item>
+        <item name="android:shadowDx">0</item>
+        <item name="android:shadowDy">0</item>
+        <item name="android:shadowRadius">10</item>
+<!--        <layer-list xmlns:android="http://schemas.android.com/apk/res/android">-->
+<!--            &lt;!&ndash; Image &ndash;&gt;-->
+<!--            <item android:drawable="@drawable/pubg_img" />-->
+
+<!--            &lt;!&ndash; Shadow &ndash;&gt;-->
+<!--            <item-->
+<!--                android:top="300dp"> &lt;!&ndash; Sesuaikan tinggi bayangan (shadow_height) sesuai kebutuhan &ndash;&gt;-->
+<!--                <shape android:shape="rectangle">-->
+<!--                    <gradient-->
+<!--                        android:angle="90"-->
+<!--                        android:startColor="#70DCFC17"-->
+<!--                        android:centerColor="#20DCFC17"-->
+<!--                        android:endtColor="#00DCFC17" />-->
+<!--                </shape>-->
+<!--            </item>-->
+<!--        </layer-list>-->
+    </style>
+    <style name="itemName">
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+    <style name="itemShop">
+        <item name="android:textSize">8sp</item>
+        <item name="android:textColor">#E34BF0</item>
+    </style>
+    <style name="itemPrice">
+        <item name="android:textSize">8sp</item>
+        <item name="android:textColor">#BFDD03</item>
+        <item name="android:shadowColor">#BFDD03</item>
+        <item name="android:shadowDx">0</item>
+        <item name="android:shadowDy">0</item>
+        <item name="android:shadowRadius">5</item>
+    </style>
+</resources>

@@ -3,8 +3,11 @@ package ProejctAkhir.myapplication;
 import java.util.ArrayList;
 
 public class GlobalData {
+    //Value username
+    public static String username;
+
     //Halaman Profile
-    public  static String topUp_value = "0";
+    public static String topUp_value = "0";
     public static String cash = "Rp. 10000";
 
     //  Game

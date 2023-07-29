@@ -9,7 +9,10 @@
     <color name="white">#FFFFFFFF</color>
     <color name="ungu_gelap">#C826D6</color>
     <color name="ungu_terang">#E34BF0</color>
+    <color name="ungu_terang2">#EA7AF4</color>
     <color name="yellow">#BFDD03</color>
     <color name="abu">#777777</color>
     <color name="merah">#FF0000</color>
+    <color name="abu_terang">#80FFFFFF</color>
+    <color name="light_yellow">#DCFC17</color>
 </resources>
