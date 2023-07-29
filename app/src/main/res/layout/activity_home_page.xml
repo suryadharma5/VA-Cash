@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#040120"
+    tools:context=".HomePage">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#040120"
+            android:orientation="vertical"
+            android:paddingTop="8dp">
+
+            <!-- Header -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/container_dua"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="20dp"
+                    android:paddingTop="20dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_marginLeft="15dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:fontFamily="@font/font_bruno"
+                        android:shadowColor="@color/ungu_terang"
+                        android:shadowDx="5"
+                        android:shadowDy="5"
+                        android:shadowRadius="20"
+                        android:text="VA"
+                        android:textColor="@color/ungu_terang"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_marginLeft="15dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:fontFamily="@font/font_bruno"
+                        android:shadowColor="@color/yellow"
+                        android:shadowDx="5"
+                        android:shadowDy="5"
+                        android:shadowRadius="20"
+                        android:text="Cash"
+                        android:textColor="@color/yellow"
+                        android:textSize="28sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="158dp"
+                    android:layout_height="65dp"
+                    android:layout_gravity="bottom"
+                    android:layout_marginStart="90dp"
+                    android:background="@drawable/template_profile"
+                    android:paddingHorizontal="28dp"
+                    android:paddingTop="25dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/font_bruno"
+                        android:shadowColor="@color/white"
+                        android:shadowDx="5"
+                        android:shadowDy="5"
+                        android:shadowRadius="20"
+                        android:text="Juligan21"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="12dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <androidx.viewpager.widget.ViewPager
+                android:layout_marginTop="40dp"
+                android:id="@+id/slider"
+                android:layout_width="300dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center" />
+
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</LinearLayout>
