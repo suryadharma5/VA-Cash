@@ -1,16 +1,19 @@
 package ProejctAkhir.myapplication;
 
+import java.net.Inet4Address;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Game {
     private String name,description,gameType;
+    private Integer game;
     public ArrayList<Item> items = new ArrayList<>();
 
-    public Game(String name, String description, String gameType){
+    public Game(String name, String description, String gameType, Integer game){
         this.name = name;
         this.description = description;
         this.gameType = gameType;
+        this.game = game;
     }
 
     public List<Item> getItems() {
@@ -43,5 +46,13 @@ public class Game {
 
     public void setGameType(String gameType) {
         this.gameType = gameType;
+    }
+
+    public Integer getGame() {
+        return game;
+    }
+
+    public void setGame(Integer game) {
+        this.game = game;
     }
 }
