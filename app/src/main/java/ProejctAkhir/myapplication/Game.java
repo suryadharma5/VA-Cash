@@ -16,7 +16,7 @@ public class Game {
         this.game = game;
     }
 
-    public List<Item> getItems() {
+    public ArrayList<Item> getItems() {
         return items;
     }
 

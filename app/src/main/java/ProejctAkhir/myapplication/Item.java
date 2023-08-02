@@ -1,12 +1,34 @@
 package ProejctAkhir.myapplication;
 
 public class Item {
-    private String name, price, description;
+    private int id;
+    private String name;
+    private String shop;
+    private String price;
 
-    public Item(String name, String price, String description) {
+    private String description;
+    private int image;
+
+    // CONSTRUCTOR + GETTER SETTER -> ALT + INSERT
+    public Item(){
+
+    }
+
+    public Item(int id, String name, String shop, String price, String description, int image) {
+        this.id = id;
         this.name = name;
+        this.shop = shop;
         this.price = price;
         this.description = description;
+        this.image = image;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -17,6 +39,14 @@ public class Item {
         this.name = name;
     }
 
+    public String getShop() {
+        return shop;
+    }
+
+    public void setShop(String shop) {
+        this.shop = shop;
+    }
+
     public String getPrice() {
         return price;
     }
@@ -25,11 +55,11 @@ public class Item {
         this.price = price;
     }
 
-    public String getDescription() {
-        return description;
+    public int getImage() {
+        return image;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setImage(int image) {
+        this.image = image;
     }
 }

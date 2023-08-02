@@ -15,4 +15,5 @@
     <color name="merah">#FF0000</color>
     <color name="abu_terang">#80FFFFFF</color>
     <color name="light_yellow">#DCFC17</color>
+    <color name="blue_overlay">#040120</color>
 </resources>

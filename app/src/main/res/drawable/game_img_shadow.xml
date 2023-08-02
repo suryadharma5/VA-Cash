@@ -1,10 +1,10 @@
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <!-- Image -->
-    <item android:drawable="@drawable/pubg_img" />
+    <item android:drawable="@drawable/minecraft_img" />
 
     <!-- Shadow -->
     <item
-        android:top="300dp"> <!-- Sesuaikan tinggi bayangan (shadow_height) sesuai kebutuhan -->
+        android:top="100dp"> <!-- Sesuaikan tinggi bayangan (shadow_height) sesuai kebutuhan -->
         <shape android:shape="rectangle">
             <gradient
                 android:angle="90"
