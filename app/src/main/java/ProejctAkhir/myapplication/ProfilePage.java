@@ -1,6 +1,8 @@
 package ProejctAkhir.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -9,12 +11,22 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 public class ProfilePage extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
+
+        RecyclerView recyclerView = findViewById(R.id.repeater);
+
+        ArrayList<Transaction> test= new ArrayList<Transaction>();
+        test.add(new Transaction("coba1", "item1", "2", "10000"));
+
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setAdapter(new RecycleAdapter(getApplicationContext(), test));
 
         TextView error = findViewById(R.id.error);
         error.setVisibility(View.GONE);

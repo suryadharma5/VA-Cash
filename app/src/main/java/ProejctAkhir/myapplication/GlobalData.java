@@ -10,6 +10,8 @@ public class GlobalData {
     public static String topUp_value = "0";
     public static String cash = "Rp. 10000";
 
+    public static ArrayList<Transaction> transactions = new ArrayList<Transaction>();
+
     //  Game
 
 

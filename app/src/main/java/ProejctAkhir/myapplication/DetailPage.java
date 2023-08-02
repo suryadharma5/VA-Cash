@@ -65,6 +65,7 @@ public class DetailPage extends AppCompatActivity {
                 }else {
                     Transaction transaction = new Transaction("Valorant", "Newbie Pack", String.valueOf(num[0]), String.valueOf(num[0] * price[0]));
                     transactions.add(transaction);
+                    GlobalData.transactions.add(transaction);
                     error.setVisibility(View.GONE);
                 }
             }
