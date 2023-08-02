@@ -7,6 +7,8 @@ import androidx.fragment.app.FragmentTransaction;
 import androidx.viewpager.widget.ViewPager;
 import androidx.viewpager2.widget.ViewPager2;
 
+import android.content.Intent;
+
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;

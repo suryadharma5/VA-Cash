@@ -1,4 +1,4 @@
-package ProejctAkhir.myapplication.Adapters;
+package ProejctAkhir.myapplication;
 
 
 import android.view.LayoutInflater;

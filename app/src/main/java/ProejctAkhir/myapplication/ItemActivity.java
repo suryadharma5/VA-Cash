@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
-import ProejctAkhir.myapplication.Adapters.ItemAdapter;
+import ProejctAkhir.myapplication.ItemAdapter;
 import ProejctAkhir.myapplication.Game;
 import ProejctAkhir.myapplication.GlobalData;
 import ProejctAkhir.myapplication.Item;
@@ -28,6 +28,7 @@ public class ItemActivity extends AppCompatActivity {
 
     RecyclerView recyclerView;
     ItemAdapter adapter;
+    LinearLayout back;
 
     private DrawerLayout drawerLayout;
     private ImageView ivMenuIcon;
@@ -71,7 +72,7 @@ public class ItemActivity extends AppCompatActivity {
         backBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent toHome = new Intent(getApplicationContext(), HomePage.class);
+                Intent toHome = new Intent(ItemActivity.this, HomePage.class);
                 toHome.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
                 startActivity(toHome);
                 overridePendingTransition(R.anim.slide_in_back, R.anim.slide_out_back);
