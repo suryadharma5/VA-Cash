@@ -28,6 +28,7 @@ public class GridViewAdapter extends ArrayAdapter<Game>  {
 
     public void setData(ArrayList<Game> newGames) {
         this.games = newGames;
+        notifyDataSetChanged();
     }
 
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent){

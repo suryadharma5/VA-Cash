@@ -8,44 +8,46 @@
     app:cardMaxElevation="6dp"
     app:cardUseCompatPadding="true"
     app:cardPreventCornerOverlap="true">
-    
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="188dp"
+        android:background="#040120"
         android:orientation="vertical"
-        android:padding="4dp"
-        android:background="#040120">
+        android:padding="4dp">
 
         <ImageView
             android:id="@+id/game_image"
             android:layout_width="180dp"
             android:layout_height="137dp"
             android:layout_gravity="center"
-            android:src="@drawable/img_game"
-            android:elevation="2dp"/>
+            android:elevation="2dp"
+            android:src="@drawable/img_game" />
 
         <LinearLayout
             android:layout_width="168dp"
-            android:layout_height="130dp"
-            android:background="@drawable/text_holder"
-            android:layout_marginTop="-45dp"
+            android:layout_height="80dp"
             android:layout_gravity="center"
-            android:gravity="center">
+            android:layout_marginTop="-25dp"
+            android:background="@drawable/text_holder"
+            android:gravity="center_horizontal"
+            android:paddingTop="5dp">
+
             <TextView
-                android:layout_marginTop="5dp"
                 android:id="@+id/game_name"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:textColor="@color/yellow"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/font_bruno"
                 android:shadowColor="@color/yellow"
                 android:shadowDx="5"
                 android:shadowDy="5"
                 android:shadowRadius="20"
-                android:textSize="14dp"
-                android:textStyle="bold"
                 android:text="Icon name here"
-                android:fontFamily="@font/font_bruno" />
+                android:textColor="@color/yellow"
+                android:textSize="14dp"
+                android:textStyle="bold" />
         </LinearLayout>
     </LinearLayout>
 

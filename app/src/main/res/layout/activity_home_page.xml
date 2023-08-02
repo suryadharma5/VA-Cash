@@ -101,34 +101,31 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="20dp"
-                android:orientation="horizontal"
-                android:paddingLeft="26dp"
-                android:paddingRight="26dp">
-
+                android:layout_height="match_parent"
+                android:gravity="center">
                 <LinearLayout
                     android:id="@+id/mobile_btn"
                     android:layout_width="122dp"
                     android:layout_height="49dp"
-                    android:background="@drawable/bg_wallet"
+                    android:background="@drawable/bg_selected"
                     android:gravity="center"
                     android:orientation="horizontal"
                     android:paddingBottom="7dp">
 
                     <ImageView
+                        android:id="@+id/mobile_icon"
                         android:layout_width="14dp"
                         android:layout_height="18dp"
                         android:layout_marginRight="10dp"
-                        android:src="@drawable/mobile_vector" />
+                        android:src="@drawable/mobile_selected" />
 
                     <TextView
+                        android:id="@+id/mobile_txt"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/font_bruno"
                         android:text="Mobile"
-                        android:textColor="@color/white" />
+                        android:textColor="@color/ungu_gelap" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -141,12 +138,14 @@
                     android:paddingBottom="7dp">
 
                     <ImageView
+                        android:id="@+id/pc_icon"
                         android:layout_width="19dp"
                         android:layout_height="23dp"
                         android:layout_marginRight="10dp"
                         android:src="@drawable/pc_vector" />
 
                     <TextView
+                        android:id="@+id/pc_txt"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/font_bruno"
@@ -164,12 +163,14 @@
                     android:paddingBottom="7dp">
 
                     <ImageView
+                        android:id="@+id/console_icon"
                         android:layout_width="19dp"
                         android:layout_height="23dp"
                         android:layout_marginRight="10dp"
                         android:src="@drawable/console_vector" />
 
                     <TextView
+                        android:id="@+id/console_txt"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/font_bruno"
@@ -179,15 +180,13 @@
 
             </LinearLayout>
 
-
-            <GridView
+            <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:numColumns="3"
-                android:horizontalSpacing="3dp"
-                android:verticalSpacing="3dp"
-                android:id="@+id/grid_view">
-            </GridView>
+                android:layout_height="match_parent"
+                android:id="@+id/fragment_containet"/>
+
+
+
 
 
 
