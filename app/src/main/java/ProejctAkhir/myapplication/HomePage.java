@@ -22,12 +22,14 @@ import java.util.ArrayList;
 
 public class HomePage extends AppCompatActivity implements AdapterView.OnItemClickListener {
 
-    int [] carouselImages = {R.drawable.bg_1, R.drawable.bg_valo, R.drawable.bg_ml};
+    int currImg = 0;
+    int [] carouselImages = {R.drawable.bg_0, R.drawable.bg_3, R.drawable.bg_2};
     ArrayList<Game> allGames;
     TabLayout tabLayout;
     ViewPager2 tabPager;
     HomePagerAdapter homePagerAdapter;
     Integer toggle = 1;
+    ViewPager imageSlider;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,7 +52,7 @@ public class HomePage extends AppCompatActivity implements AdapterView.OnItemCli
 
         username.setText(GlobalData.username);
 
-        ViewPager imageSlider = findViewById(R.id.slider);
+        imageSlider = findViewById(R.id.slider);
 
         CarouselAdapter carouselAdapter = new CarouselAdapter(this, carouselImages);
         imageSlider.setAdapter(carouselAdapter);
@@ -123,6 +125,7 @@ public class HomePage extends AppCompatActivity implements AdapterView.OnItemCli
             }
         });
 
+        autoImage();
 
     }
 
@@ -137,5 +140,16 @@ public class HomePage extends AppCompatActivity implements AdapterView.OnItemCli
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.fragment_containet, fragment);
         fragmentTransaction.commit();
+    }
+
+    void autoImage(){
+        imageSlider.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                currImg = (imageSlider.getCurrentItem()+1)% carouselImages.length;
+                imageSlider.setCurrentItem(currImg);
+                autoImage();
+            }
+        }, 3000);
     }
 }
