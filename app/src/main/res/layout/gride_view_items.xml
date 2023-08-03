@@ -31,7 +31,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="-25dp"
             android:background="@drawable/text_holder"
-            android:gravity="center_horizontal"
+            android:gravity="center"
             android:paddingTop="5dp">
 
             <TextView
@@ -41,12 +41,12 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="5dp"
                 android:fontFamily="@font/font_bruno"
-                android:shadowColor="@color/yellow"
+                android:shadowColor="@color/white"
                 android:shadowDx="5"
                 android:shadowDy="5"
                 android:shadowRadius="20"
                 android:text="Icon name here"
-                android:textColor="@color/yellow"
+                android:textColor="@color/white"
                 android:textSize="14dp"
                 android:textStyle="bold" />
         </LinearLayout>

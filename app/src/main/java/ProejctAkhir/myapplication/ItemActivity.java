@@ -26,7 +26,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Vector;
 
-public class ItemActivity extends AppCompatActivity {
+public class ItemActivity extends AppCompatActivity implements ItemInterface{
 
     RecyclerView recyclerView;
     ItemAdapter adapter;
@@ -41,6 +41,8 @@ public class ItemActivity extends AppCompatActivity {
         setContentView(R.layout.activity_item);
 
         Intent item = getIntent();
+        ImageView imageView = findViewById(R.id.game_img);
+        imageView.setImageResource(item.getIntExtra("image",0));
 
         ArrayList<Item> items = item.getParcelableArrayListExtra("items");
 
@@ -64,27 +66,7 @@ public class ItemActivity extends AppCompatActivity {
         recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new GridLayoutManager(this, 2, GridLayoutManager.VERTICAL, false));
 
-        Game selectedGame = null;
-        ArrayList<Game> games = new GlobalData().createGame();
-        for (Game game : games) {
-            if (game.getName().equals(GlobalData.currentGame) && game.getGameType().equals(GlobalData.currentType)) {
-                selectedGame = game;
-                break;
-            }
-        }
-
-          ArrayList<Item> itemList = selectedGame.getItems();
-//        itemVector.add(new Item(1, "Item1", "Shop Grak", 10000, R.drawable.pubg_250uc));
-//        itemVector.add(new Item(2, "Item2", "Shop Grak", 20000, R.drawable.pubg_250uc));
-//        itemVector.add(new Item(3, "Item3", "Shop Grak", 20000, R.drawable.pubg_250uc));
-//        itemVector.add(new Item(4, "Item4", "Shop Grak", 20000, R.drawable.pubg_250uc));
-//        itemVector.add(new Item(5, "Item5", "Shop Grak", 20000, R.drawable.pubg_250uc));
-//        itemVector.add(new Item(6, "Item6", "Shop Grak", 20000, R.drawable.pubg_250uc));
-//        itemVector.add(new Item(7, "Item7", "Shop Grak", 20000, R.drawable.pubg_250uc));
-//        itemVector.add(new Item(8, "Item8", "Shop Grak", 20000, R.drawable.pubg_250uc));
-//        itemVector.add(new Item(9, "Item9", "Shop Grak", 20000, R.drawable.pubg_250uc));
-
-        adapter = new ItemAdapter(items);
+        adapter = new ItemAdapter(items, this);
         recyclerView.setAdapter(adapter);
 
         phoneIcon.requestFocus();
@@ -98,5 +80,17 @@ public class ItemActivity extends AppCompatActivity {
                 overridePendingTransition(R.anim.slide_in_back, R.anim.slide_out_back);
             }
         });
+    }
+
+    @Override
+    public void onItemClick(int position) {
+        Intent item = getIntent();
+        ArrayList<Item> items = item.getParcelableArrayListExtra("items");
+        Intent intent = new Intent(ItemActivity.this, DetailPage.class);
+        intent.putExtra("nameitem", items.get(position).getName());
+        intent.putExtra("description", items.get(position).getDescription());
+        intent.putExtra("price", items.get(position).getPrice());
+        intent.putExtra("gameName", item.getStringExtra("gameName"));
+        startActivity(intent);
     }
 }

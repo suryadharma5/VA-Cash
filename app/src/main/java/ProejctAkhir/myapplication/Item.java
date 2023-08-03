@@ -12,7 +12,6 @@ public class Item implements Parcelable {
     private String name;
     private String shop;
     private String price;
-
     private String description;
     private int image;
 
@@ -90,6 +89,15 @@ public class Item implements Parcelable {
     public void setImage(int image) {
         this.image = image;
     }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
 
     @Override
     public int describeContents() {

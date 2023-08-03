@@ -245,7 +245,7 @@
                                     android:id="@+id/game_img"
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:src="@drawable/game_img_shadow"
+                                    android:src="@drawable/minecraft_img"
                                     android:elevation="10dp"/>
 
                             </androidx.cardview.widget.CardView>

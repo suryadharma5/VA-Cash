@@ -18,8 +18,10 @@ import java.util.Vector;
 
 public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
     ArrayList<Item> itemVector;
+    private final ItemInterface itemInterface;
 
-    public ItemAdapter(ArrayList<Item> itemVector) {
+    public ItemAdapter(ArrayList<Item> itemVector, ItemInterface itemInterface) {
+        this.itemInterface = itemInterface;
         this.itemVector = itemVector;
     }
 
@@ -27,7 +29,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
     @Override
     public ItemAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_layout, parent, false);
-        return new ViewHolder(view);
+        return new ViewHolder(view, itemInterface);
     }
 
     @Override
@@ -52,12 +54,25 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
         TextView shop;
         TextView price;
 
-        public ViewHolder(@NonNull View itemView) {
+        public ViewHolder(@NonNull View itemView, ItemInterface itemInterface) {
             super(itemView);
             image = itemView.findViewById(R.id.itemImage);
             name = itemView.findViewById(R.id.itemName);
             shop = itemView.findViewById(R.id.itemShop);
             price = itemView.findViewById(R.id.itemPrice);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if(itemInterface != null){
+                        int pos = getAdapterPosition();
+
+                        if(pos != RecyclerView.NO_POSITION){
+                            itemInterface.onItemClick(pos);
+                        }
+                    }
+                }
+            });
         }
     }
 }
