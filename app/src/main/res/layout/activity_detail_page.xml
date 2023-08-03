@@ -22,56 +22,83 @@
 
             <!-- Header -->
             <LinearLayout
+                android:id="@+id/title_bar"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
+                android:layout_height="wrap_content"
+                android:layout_marginTop="21dp"
+                android:layout_marginHorizontal="10dp"
+                android:gravity="center_vertical"
+                >
                 <LinearLayout
-                    android:id="@+id/container_dua"
+                    android:id="@+id/back_container"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingHorizontal="20dp"
-                    android:paddingTop="20dp">
+                    android:orientation="horizontal"
+                    >
 
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginRight="20dp"
-                        android:src="@drawable/group_2" />
+                    <LinearLayout
+                        android:id="@+id/arrow_back"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:background="@drawable/arrow_back"
+                        />
 
                     <TextView
+                        android:id="@+id/items_text"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
+                        android:layout_height="match_parent"
                         android:fontFamily="@font/font_bruno"
                         android:text="Detail"
-                        android:textColor="@color/white"
-                        android:textSize="20sp" />
+                        android:layout_marginStart="15dp"
+                        android:textAppearance="@style/items"
+                        android:gravity="center_vertical"
+                        />
                 </LinearLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
 
-                <LinearLayout
-                    android:layout_width="158dp"
-                    android:layout_height="65dp"
-                    android:layout_gravity="bottom"
-                    android:layout_marginStart="90dp"
-                    android:background="@drawable/template_profile"
-                    android:paddingHorizontal="28dp"
-                    android:paddingTop="25dp">
-
-                    <TextView
+                    <LinearLayout
+                        android:id="@+id/profile_container"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/font_bruno"
-                        android:shadowColor="@color/white"
-                        android:shadowDx="5"
-                        android:shadowDy="5"
-                        android:shadowRadius="20"
-                        android:text="Juligan21"
-                        android:textAlignment="center"
-                        android:textColor="@color/white"
-                        android:textSize="12dp" />
-                </LinearLayout>
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginRight="30dp"
+                        android:background="@drawable/profile_box"
+                        android:gravity="center"
+                        android:minWidth="120dp"
+                        android:paddingVertical="12dp"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="30dp">
+
+                        <TextView
+                            android:id="@+id/username"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/font_bruno"
+                            android:gravity="center_vertical"
+                            android:text="@string/username"
+                            android:textAppearance="@style/usernameBar" />
+
+                    </LinearLayout>
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/profile_img"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentRight="true"
+                        android:padding="5dp"
+                        app:strokeWidth="3dp"
+                        app:strokeColor="@color/white"
+                        app:shapeAppearanceOverlay="@style/circleImg"
+                        app:srcCompat="@drawable/profile_img"
+                        android:layout_alignRight="@+id/profile_container"/>
+
+                </RelativeLayout>
             </LinearLayout>
 
 
