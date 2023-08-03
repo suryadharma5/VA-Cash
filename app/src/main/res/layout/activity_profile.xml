@@ -73,7 +73,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Vincensia Charitas"
+                    android:text="Julius Salim"
                     android:fontFamily="@font/font_bruno"
                     android:textColor="@color/white"
                     android:textAlignment="center"/>
@@ -105,7 +105,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Vincensiacaribuah@dinas.ac.id"
+                        android:text="salimjulius@dinas.ac.id"
                         android:textColor="@color/abu"
                         android:layout_marginLeft="5dp"
                         android:fontFamily="@font/font_styrene"/>
@@ -199,7 +199,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textSize="12dp"
-                        android:text="muka saya ganteng kaya sultan"
+                        android:text="error"
                         android:fontFamily="@font/font_bruno"
                         android:textColor="@color/merah"
                         android:layout_gravity="end"

@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -11,22 +12,27 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import java.text.NumberFormat;
 import java.util.ArrayList;
 
-public class ProfilePage extends AppCompatActivity {
-
+public class ProfilePage extends AppCompatActivity implements ProfileInterface{
+    NumberFormat numberFormat = NumberFormat.getNumberInstance();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
         RecyclerView recyclerView = findViewById(R.id.repeater);
+        TextView balance = findViewById(R.id.balance);
+        balance.setText("IDR " +numberFormat.format(Integer.parseInt(GlobalData.topUp_value)));
 
         ArrayList<Transaction> test= new ArrayList<Transaction>();
         test.add(new Transaction("coba1", "item1", "2", "10000"));
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        recyclerView.setAdapter(new RecycleAdapter(getApplicationContext(), test));
+        if(GlobalData.transactions.size() > 0){
+            recyclerView.setAdapter(new RecycleAdapter(this, GlobalData.transactions, this));
+        }
 
         TextView error = findViewById(R.id.error);
         error.setVisibility(View.GONE);
@@ -44,19 +50,40 @@ public class ProfilePage extends AppCompatActivity {
                     if(amount > 0){
                         GlobalData.topUp_value = String.valueOf( Integer.parseInt(GlobalData.topUp_value) + Integer.parseInt(topUp_value));
                         TextView balance = findViewById(R.id.balance);
-                        String topUp_val = GlobalData.topUp_value;
-                        balance.setText("Rp." + topUp_val);
+                        balance.setText("IDR " + numberFormat.format(Integer.parseInt(GlobalData.topUp_value)));
+                        error.setVisibility(View.GONE);
                     }else {
-                        topUp_input.setError("Value must be greater than 0");
+                        error.setText("Value must > 0");
+                        error.setVisibility(View.VISIBLE);
                     }
 
                 }else {
-                    topUp_input.setError("Value must be a number");
+                    error.setText("Value must be a number");
+                    error.setVisibility(View.VISIBLE);
                 }
             }
         });
 
 
 
+    }
+
+    @Override
+    public void onItemClick(int position) {
+        Game game = GlobalData.games.get(0);
+        System.out.println("halo");
+
+        for (Game g:GlobalData.games) {
+            if (g.getName().equals(GlobalData.transactions.get(position).getName())) {
+                game = g;
+                break;
+            }
+        }
+
+        Intent intent = new Intent(ProfilePage.this, ItemActivity.class);
+        intent.putExtra("items", game.getItems());
+        intent.putExtra("gameName", game.getName());
+        intent.putExtra("gameType", game.getGameType());
+        startActivity(intent);
     }
 }

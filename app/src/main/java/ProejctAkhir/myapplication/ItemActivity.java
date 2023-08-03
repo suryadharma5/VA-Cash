@@ -88,6 +88,7 @@ public class ItemActivity extends AppCompatActivity implements ItemInterface{
         ArrayList<Item> items = item.getParcelableArrayListExtra("items");
         Intent intent = new Intent(ItemActivity.this, DetailPage.class);
         intent.putExtra("nameitem", items.get(position).getName());
+        intent.putExtra("image", items.get(position).getImage());
         intent.putExtra("description", items.get(position).getDescription());
         intent.putExtra("price", items.get(position).getPrice());
         intent.putExtra("gameName", item.getStringExtra("gameName"));

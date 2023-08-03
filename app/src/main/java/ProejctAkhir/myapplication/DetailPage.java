@@ -10,6 +10,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import org.w3c.dom.Text;
@@ -50,6 +51,9 @@ public class DetailPage extends AppCompatActivity {
 
         EditText emailInput = findViewById(R.id.pay_email);
         EditText usernameInput = findViewById(R.id.pay_username);
+
+        ImageView detailImage = findViewById(R.id.detail_image);
+        detailImage.setImageResource(detail.getIntExtra("image", 0));
 
         final String[] totalPrice = new String[1];
 
@@ -118,10 +122,13 @@ public class DetailPage extends AppCompatActivity {
                             })
                             .show();
                 }else {
-                    Transaction transaction = new Transaction("Valorant", "Newbie Pack", String.valueOf(num[0]), totalPrice[0]);
+                    Transaction transaction = new Transaction(detail.getStringExtra("gameName"), detail.getStringExtra("nameitem"), String.valueOf(num[0]), totalPrice[0]);
                     transactions.add(transaction);
                     GlobalData.transactions.add(transaction);
-                    error.setVisibility(View.GONE);
+                    Intent toProfile = new Intent(DetailPage.this, ProfilePage.class);
+                    toProfile.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                    startActivity(toProfile);
+                    overridePendingTransition(R.anim.slide_out_back, R.anim.slide_in_back);
                 }
 
 

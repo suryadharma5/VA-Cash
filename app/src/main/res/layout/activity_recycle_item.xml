@@ -23,42 +23,47 @@
         android:layout_marginBottom="11dp" />
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:paddingTop="27dp"
-        android:layout_marginLeft="10dp">
+        android:layout_marginTop="-10dp"
+        android:layout_marginLeft="10dp"
+        android:gravity="start">
+
         <TextView
             android:id="@+id/game_name_profile"
-            android:layout_width="90dp"
+            android:layout_width="190dp"
             android:layout_height="wrap_content"
-            android:text="Valorant"
-            android:textColor="@color/white"
-            android:fontFamily="@font/font_bruno"/>
+            android:fontFamily="@font/font_bruno"
+            android:text="Stumble Guys"
+            android:textColor="@color/white" />
 
         <TextView
             android:id="@+id/game_items_profile"
-            android:layout_width="100dp"
+            android:layout_marginTop="5dp"
+            android:layout_width="190dp"
             android:layout_height="wrap_content"
             android:text="Newbie Pack - 2 pcs"
             android:textColor="@color/white"
             android:fontFamily="@font/font_bruno"
             android:textSize="8dp"/>
+        <TextView
+            android:id="@+id/price_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="end"
+            android:fontFamily="@font/font_bruno"
+            android:shadowColor="@color/yellow"
+            android:shadowDx="5"
+            android:shadowDy="5"
+            android:shadowRadius="20"
+            android:text="Rp. 120.000"
+            android:textColor="@color/yellow"
+            android:textSize="12dp" />
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/price_profile"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:fontFamily="@font/font_bruno"
-        android:shadowColor="@color/yellow"
-        android:shadowDx="5"
-        android:shadowDy="5"
-        android:shadowRadius="20"
-        android:text="Rp. 120.000"
-        android:textColor="@color/yellow"
-        android:textSize="12dp" />
+
 
 
 </LinearLayout>
