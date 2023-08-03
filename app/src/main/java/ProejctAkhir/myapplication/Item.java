@@ -1,6 +1,13 @@
 package ProejctAkhir.myapplication;
 
-public class Item {
+import android.os.Parcel;
+import android.os.Parcelable;
+
+import androidx.annotation.NonNull;
+
+import java.io.Serializable;
+
+public class Item implements Parcelable {
     private int id;
     private String name;
     private String shop;
@@ -22,6 +29,27 @@ public class Item {
         this.description = description;
         this.image = image;
     }
+
+    protected Item(Parcel in) {
+        id = in.readInt();
+        name = in.readString();
+        shop = in.readString();
+        price = in.readString();
+        description = in.readString();
+        image = in.readInt();
+    }
+
+    public static final Creator<Item> CREATOR = new Creator<Item>() {
+        @Override
+        public Item createFromParcel(Parcel in) {
+            return new Item(in);
+        }
+
+        @Override
+        public Item[] newArray(int size) {
+            return new Item[size];
+        }
+    };
 
     public int getId() {
         return id;
@@ -61,5 +89,20 @@ public class Item {
 
     public void setImage(int image) {
         this.image = image;
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(@NonNull Parcel dest, int flags) {
+        dest.writeInt(id);
+        dest.writeString(name);
+        dest.writeString(shop);
+        dest.writeString(price);
+        dest.writeString(description);
+        dest.writeInt(image);
     }
 }

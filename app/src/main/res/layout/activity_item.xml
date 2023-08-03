@@ -185,7 +185,7 @@
                             >
                             <LinearLayout
                                 android:id="@+id/phone_icon"
-                                android:layout_width="12dp"
+                                android:layout_width="15dp"
                                 android:layout_height="18dp"
                                 android:layout_marginLeft="20dp"
                                 android:gravity="center_vertical"

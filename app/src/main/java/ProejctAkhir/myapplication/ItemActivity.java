@@ -20,8 +20,10 @@ import ProejctAkhir.myapplication.Item;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Vector;
 
 public class ItemActivity extends AppCompatActivity {
@@ -38,8 +40,26 @@ public class ItemActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_item);
 
+        Intent item = getIntent();
+
+        ArrayList<Item> items = item.getParcelableArrayListExtra("items");
+
+        TextView textView = findViewById(R.id.pubg_mobile);
+        textView.setText( item.getStringExtra("gameName"));
+
+        TextView gametype = findViewById(R.id.mobileTitle);
+        gametype.setText(item.getStringExtra("gameType"));
+
         LinearLayout backBtn = findViewById(R.id.arrow_back);
         LinearLayout phoneIcon = findViewById(R.id.phone_icon);
+
+        if(item.getStringExtra("gameType").equals("mobile")){
+            phoneIcon.setBackgroundResource(R.drawable.phone_icon);
+        }else if(item.getStringExtra("gameType").equals("PC")){
+            phoneIcon.setBackgroundResource(R.drawable.pc);
+        }else if (item.getStringExtra("gameType").equals("Console")){
+            phoneIcon.setBackgroundResource(R.drawable.console);
+        }
 
         recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new GridLayoutManager(this, 2, GridLayoutManager.VERTICAL, false));
@@ -64,7 +84,7 @@ public class ItemActivity extends AppCompatActivity {
 //        itemVector.add(new Item(8, "Item8", "Shop Grak", 20000, R.drawable.pubg_250uc));
 //        itemVector.add(new Item(9, "Item9", "Shop Grak", 20000, R.drawable.pubg_250uc));
 
-        adapter = new ItemAdapter(itemList);
+        adapter = new ItemAdapter(items);
         recyclerView.setAdapter(adapter);
 
         phoneIcon.requestFocus();
