@@ -49,7 +49,7 @@ public class GridViewAdapter extends ArrayAdapter<Game>  {
                 Intent intent = new Intent(v.getContext(), ItemActivity.class);
                 intent.putExtra("gameName", game.getName());
                 intent.putExtra("gameType", game.getGameType());
-                intent.putExtra("items", game.getItems());
+//                intent.putExtra("image", game.getGame());
                 v.getContext().startActivity(intent);
             }
         });
