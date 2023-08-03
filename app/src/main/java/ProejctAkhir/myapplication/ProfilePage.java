@@ -7,8 +7,13 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -52,6 +57,37 @@ public class ProfilePage extends AppCompatActivity {
 
                 }else {
                     topUp_input.setError("Value must be a number");
+                }
+            }
+        });
+
+        Animation slideDownAnimation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.slide_down);
+        Animation slideUpAnimation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.slide_up);
+        Animation fadeInAnimation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fade_in);
+        Animation fadeOutAnimation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fade_out);
+
+        ImageView drawer_btn = findViewById(R.id.drawer_btn);
+        LinearLayout dropdownList = findViewById(R.id.dropdownList);
+        RelativeLayout overlay = findViewById(R.id.overlay);
+
+        drawer_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                if (dropdownList.getVisibility() == View.VISIBLE) {
+                    dropdownList.startAnimation(slideUpAnimation);
+                    dropdownList.setVisibility(View.INVISIBLE);
+                } else {
+                    dropdownList.setVisibility(View.VISIBLE);
+                    dropdownList.startAnimation(slideDownAnimation);
+                }
+
+                if (overlay.getVisibility() == View.VISIBLE) {
+                    overlay.startAnimation(fadeOutAnimation);
+                    overlay.setVisibility(View.INVISIBLE);
+                } else {
+                    overlay.setVisibility(View.VISIBLE);
+                    overlay.startAnimation(fadeInAnimation);
                 }
             }
         });
